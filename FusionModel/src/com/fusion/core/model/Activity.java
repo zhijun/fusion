@@ -3,11 +3,16 @@
  */
 package com.fusion.core.model;
 
+import com.google.code.morphia.annotations.Entity;
+import com.google.code.morphia.annotations.Id;
+
 /**
  * @author zhijun An activity represents a durable effort started by
  *         participants including services.
  */
+@Entity ("Activity")
 public class Activity {
+	@Id String id;
 	private String title;
 	private String memo;
 
