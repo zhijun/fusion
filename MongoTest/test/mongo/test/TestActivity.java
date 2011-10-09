@@ -6,6 +6,7 @@ package mongo.test;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import org.junit.After;
 import org.junit.Before;
@@ -53,13 +54,14 @@ public class TestActivity {
 		Activity act=new Activity();
 		act.setTitle("My first activity");
 		act.setMemo("No need to say more about it");
-		act.setStatus(Status.open);
+		act.setStatus(Status.pending);
 		
 		Parties parties=new Parties();
 		Party party=new Party();
 		party.setCredit(null);
 		party.setNickName("kevin zhang");
 		party.setPoints(102);
+		party.setRegisterDate(new Date());
 		Party party2=new Party();
 		party2.setCredit(null);
 		party2.setNickName("jiang shuai");
@@ -74,6 +76,8 @@ public class TestActivity {
 		Datastore mdb=new Morphia().map(Activity.class).createDatastore(mongo, "fusion");
 		mdb.ensureIndexes();
 		mdb.save(act);
+		
+		
 	}
 
 }
