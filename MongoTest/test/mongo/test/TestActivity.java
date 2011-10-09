@@ -53,7 +53,7 @@ public class TestActivity {
 	public void test() {
 		Activity act=new Activity();
 		act.setTitle("My first activity");
-		act.setMemo("��˳�糵");
+		act.setMemo("搭顺风车");
 		act.setStatus(Status.pending);
 		
 		Parties parties=new Parties();
