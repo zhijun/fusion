@@ -15,6 +15,7 @@ public class Activity {
 	@Id String id;
 	private String title;
 	private String memo;
+	private Party creator;
 
 	/**
 	 * @return the title
@@ -103,6 +104,20 @@ public class Activity {
 
 	public void setStatus(Status status) {
 		this.status = status;
+	}
+
+	/**
+	 * @return the creator
+	 */
+	public Party getCreator() {
+		return creator;
+	}
+
+	/**
+	 * @param creator the creator to set
+	 */
+	public void setCreator(Party creator) {
+		this.creator = creator;
 	}
 
 }

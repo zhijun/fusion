@@ -71,11 +71,15 @@ public class TestActivity {
 		partyList.add(party2);
 		parties.setParticipants(partyList);
 		
+		act.setCreator(party);
 		act.setParties(parties);
 		
 		Datastore mdb=new Morphia().map(Activity.class).createDatastore(mongo, "fusion");
 		mdb.ensureIndexes();
 		mdb.save(act);
+		
+		Activity dbact=mdb.find(Activity.class).get();
+		assertEquals(2, dbact.getParties().getParticipants().size());
 		
 		
 	}
