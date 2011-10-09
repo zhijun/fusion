@@ -25,7 +25,6 @@ import com.mongodb.Mongo;
  * @author zhijun
  *
  */
-@SuppressWarnings("unused")
 public class TestActivity {
 	Mongo mongo;
 	DB db;
