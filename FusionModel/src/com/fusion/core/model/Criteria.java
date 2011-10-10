@@ -14,7 +14,7 @@ public abstract class Criteria {
 	/**
 	 * @return the criteria
 	 */
-	public Object getCriteria() {
+	public Object getExpected() {
 		return expected;
 	}
 
@@ -22,8 +22,8 @@ public abstract class Criteria {
 	 * @param criteria
 	 *            the criteria to set
 	 */
-	public void setCriteria(Object criteria) {
-		this.expected = criteria;
+	public void setExpected(Object expected) {
+		this.expected = expected;
 	}
 
 	/**
