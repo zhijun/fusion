@@ -8,14 +8,14 @@ package com.fusion.core.model;
  * 
  */
 public abstract class Criteria {
-	protected Object criteria;
+	protected Object expected;
 	protected Object fact;
 
 	/**
 	 * @return the criteria
 	 */
 	public Object getCriteria() {
-		return criteria;
+		return expected;
 	}
 
 	/**
@@ -23,7 +23,7 @@ public abstract class Criteria {
 	 *            the criteria to set
 	 */
 	public void setCriteria(Object criteria) {
-		this.criteria = criteria;
+		this.expected = criteria;
 	}
 
 	/**

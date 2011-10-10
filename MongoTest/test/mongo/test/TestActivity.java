@@ -52,7 +52,7 @@ public class TestActivity {
 	public void test() {
 		Activity act=new Activity();
 		act.setTitle("My first activity");
-		act.setMemo("搭顺风车");
+		act.setMemo("搭顺风车888");
 		act.setStatus(Status.pending);
 		
 		Parties parties=new Parties();
@@ -79,6 +79,7 @@ public class TestActivity {
 		
 		Activity dbact=mdb.find(Activity.class).get();
 		assertEquals(2, dbact.getParties().getParticipants().size());
+		
 		
 		
 	}
