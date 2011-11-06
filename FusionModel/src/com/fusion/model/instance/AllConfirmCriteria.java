@@ -4,17 +4,19 @@
 package com.fusion.model.instance;
 
 import com.fusion.model.core.Criteria;
+import com.fusion.model.core.Party;
+
 
 /**
  * @author zhijun
  *
  */
-public class CoupleConfirmCriteria extends Criteria {
+public class AllConfirmCriteria extends Criteria {
 
 	/**
 	 * 
 	 */
-	public CoupleConfirmCriteria() {
+	public AllConfirmCriteria() {
 		// TODO Auto-generated constructor stub
 		
 	}
@@ -25,7 +27,13 @@ public class CoupleConfirmCriteria extends Criteria {
 	@Override
 	public boolean isMet() {
 		// TODO Auto-generated method stub
-		return false;
+		AllConfirmFact fact=(AllConfirmFact)getFact();
+		for(Party party:activity.getParties().getParties()){
+			if(fact.isConfirmed(party)==false){
+				return false;
+			}
+		}
+		return true;
 	}
 
 }

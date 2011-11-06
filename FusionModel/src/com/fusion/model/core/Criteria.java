@@ -8,6 +8,7 @@ package com.fusion.model.core;
  * 
  */
 public abstract class Criteria {
+	protected Activity activity;
 	protected Object expected;
 	protected Object fact;
 
@@ -39,6 +40,20 @@ public abstract class Criteria {
 	 */
 	public void setFact(Object fact) {
 		this.fact = fact;
+	}
+
+	/**
+	 * @return the activity
+	 */
+	public Activity getActivity() {
+		return activity;
+	}
+
+	/**
+	 * @param activity the activity to set
+	 */
+	public void setActivity(Activity activity) {
+		this.activity = activity;
 	}
 
 	abstract public boolean isMet();

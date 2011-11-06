@@ -10,6 +10,11 @@ import java.util.List;
  * 
  */
 public class Criterias {
+	/**
+	 * Parent Activity reference. 
+	 */
+	private Activity activity;
+	
 	private List<Criteria> criterias;
 
 	public List<Criteria> getCriterias() {
@@ -18,6 +23,19 @@ public class Criterias {
 
 	public void setCriterias(List<Criteria> criterias) {
 		this.criterias = criterias;
+	}
+	/**
+	 * @return the activity
+	 */
+	public Activity getActivity() {
+		return activity;
+	}
+
+	/**
+	 * @param activity the activity to set
+	 */
+	public void setActivity(Activity activity) {
+		this.activity = activity;
 	}
 
 	public boolean isMet() {
@@ -28,5 +46,6 @@ public class Criterias {
 		}
 		return true;
 	}
+
 
 }

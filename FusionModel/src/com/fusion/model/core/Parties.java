@@ -10,20 +10,20 @@ import java.util.List;
  *
  */
 public class Parties {
-	private List<Party> participants;
+	private List<Party> parties;
 
 	/**
-	 * @return the participants
+	 * @return the parties
 	 */
-	public List<Party> getParticipants() {
-		return participants;
+	public List<Party> getParties() {
+		return parties;
 	}
 
 	/**
-	 * @param participants the participants to set
+	 * @param parties the parties to set
 	 */
-	public void setParticipants(List<Party> participants) {
-		this.participants = participants;
+	public void setParties(List<Party> parties) {
+		this.parties = parties;
 	}
 
 
