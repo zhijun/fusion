@@ -68,7 +68,7 @@ public class TestActivity {
 		ArrayList<Party> partyList=new ArrayList<Party>();
 		partyList.add(party);
 		partyList.add(party2);
-		parties.setParticipants(partyList);
+		parties.setParties(partyList);
 		
 		act.setCreator(party);
 		act.setParties(parties);
@@ -78,7 +78,7 @@ public class TestActivity {
 		mdb.save(act);
 		
 		Activity dbact=mdb.find(Activity.class).get();
-		assertEquals(2, dbact.getParties().getParticipants().size());
+		assertEquals(2, dbact.getParties().getParties().size());
 		
 		
 		
