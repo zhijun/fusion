@@ -12,10 +12,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.fusion.core.model.Activity;
-import com.fusion.core.model.Parties;
-import com.fusion.core.model.Party;
-import com.fusion.core.model.Status;
+import com.fusion.model.core.Activity;
+import com.fusion.model.core.Parties;
+import com.fusion.model.core.Party;
+import com.fusion.model.core.Status;
 import com.google.code.morphia.Datastore;
 import com.google.code.morphia.Morphia;
 import com.mongodb.DB;
