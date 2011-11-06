@@ -1,4 +1,4 @@
-package com.fusion.core.model;
+package com.fusion.model.core;
 
 class Credits {
 	private int credit;

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.fusion.core.model;
+package com.fusion.model.core;
 
 import com.google.code.morphia.annotations.Entity;
 import com.google.code.morphia.annotations.Id;

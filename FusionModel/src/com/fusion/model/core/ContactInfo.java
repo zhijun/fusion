@@ -1,4 +1,4 @@
-package com.fusion.core.model;
+package com.fusion.model.core;
 
 public class ContactInfo {
 private int QQ;

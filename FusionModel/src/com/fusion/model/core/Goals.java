@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.fusion.core.model;
+package com.fusion.model.core;
 
 import java.util.List;
 
