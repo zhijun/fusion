@@ -13,7 +13,7 @@ import com.fusion.model.core.Party;
  * @author zhijun
  *
  */
-public class AllConfirmFact {
+public class AnyConfirmFact {
 	private Set<Party> confirmations=new HashSet<Party>();
 	/**
 	 * @return the confirmations
@@ -33,8 +33,13 @@ public class AllConfirmFact {
 	public void takeBack(Party party){
 		confirmations.remove(party);
 	}
-	public boolean isAllConfirmed(List<Party> parties){
-		return confirmations.containsAll(parties);
+	public boolean isAnyConfirmed(List<Party> parties){
+		for(Party party: parties){
+			if(confirmations.contains(party)){
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	

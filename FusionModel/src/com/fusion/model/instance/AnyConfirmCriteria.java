@@ -10,12 +10,12 @@ import com.fusion.model.core.Criteria;
  * @author zhijun
  *
  */
-public class AllConfirmCriteria extends Criteria {
+public class AnyConfirmCriteria extends Criteria {
 
 	/**
 	 * 
 	 */
-	public AllConfirmCriteria() {
+	public AnyConfirmCriteria() {
 		// TODO Auto-generated constructor stub
 		
 	}
@@ -26,8 +26,8 @@ public class AllConfirmCriteria extends Criteria {
 	@Override
 	public boolean isMet() {
 		// TODO Auto-generated method stub
-		AllConfirmFact fact=(AllConfirmFact)getFact();
-		return fact.isAllConfirmed(activity.getParties().getParties());
+		AnyConfirmFact fact=(AnyConfirmFact)getFact();
+		return fact.isAnyConfirmed(activity.getParties().getParties());
 	}
 
 }
