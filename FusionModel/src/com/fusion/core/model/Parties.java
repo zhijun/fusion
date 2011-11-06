@@ -26,4 +26,5 @@ public class Parties {
 		this.participants = participants;
 	}
 
+
 }

@@ -52,7 +52,7 @@ public class TestActivity {
 	public void test() {
 		Activity act=new Activity();
 		act.setTitle("My first activity");
-		act.setMemo("搭顺风车888");
+		act.setMemo("搭顺风车万科魅力");
 		act.setStatus(Status.pending);
 		
 		Parties parties=new Parties();
