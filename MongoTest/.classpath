@@ -3,13 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry kind="lib" path="lib/mongo-2.6.5.jar"/>
-	<classpathentry kind="lib" path="lib/gson-1.7.1.jar" sourcepath="C:/tools/google-gson-1.7.1/gson-1.7.1-sources.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/C:/tools/google-gson-1.7.1/gson-1.7.1-javadoc.jar!/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="lib/morphia-0.99.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/MongoDB"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/FusionModel"/>
 	<classpathentry kind="output" path="bin"/>
