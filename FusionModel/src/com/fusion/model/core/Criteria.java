@@ -3,11 +3,14 @@
  */
 package com.fusion.model.core;
 
+import com.google.code.morphia.annotations.Transient;
+
 /**
  * @author zhijun
  * 
  */
 public abstract class Criteria {
+	@Transient
 	protected Activity activity;
 	protected Object expected;
 	protected Object fact;

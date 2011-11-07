@@ -3,123 +3,56 @@
  */
 package com.fusion.model.core;
 
-import java.util.Date;
+import com.google.code.morphia.annotations.Reference;
 
 /**
  * @author zhijun Person or service which can be part of an Activity.
  */
 public class Party {
-	private String uid;
-	private String userType;
-	private String nickName;
-	private Date registerDate;
-	private int points;
-	private Credits credit;
-	private Profile profile;
-
+	@Reference
+	private User user;
+	
+	private String status;
+	
+	public Party(){
+		
+	}
+	public Party(User user){
+		this.user=user;
+	}
+	
 	/**
-	 * @return the uid
+	 * @return the user
 	 */
-	public String getUid() {
-		return uid;
+	public User getUser() {
+		return user;
+	}
+	/**
+	 * @param user the user to set
+	 */
+	public void setUser(User user) {
+		this.user = user;
+	}
+	/**
+	 * @return the status
+	 */
+	public String getStatus() {
+		return status;
+	}
+	/**
+	 * @param status the status to set
+	 */
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return user.getUid().hashCode();
 	}
 
-	/**
-	 * @param uid
-	 *            the uid to set
-	 */
-	public void setUid(String uid) {
-		this.uid = uid;
-	}
-
-	/**
-	 * @return the userType
-	 */
-	public String getUserType() {
-		return userType;
-	}
-
-	/**
-	 * @param userType
-	 *            the userType to set
-	 */
-	public void setUserType(String userType) {
-		this.userType = userType;
-	}
-
-	/**
-	 * @return the nickName
-	 */
-	public String getNickName() {
-		return nickName;
-	}
-
-	/**
-	 * @param nickName
-	 *            the nickName to set
-	 */
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
-	}
-
-	/**
-	 * @return the registerDate
-	 */
-	public Date getRegisterDate() {
-		return registerDate;
-	}
-
-	/**
-	 * @param registerDate
-	 *            the registerDate to set
-	 */
-	public void setRegisterDate(Date registerDate) {
-		this.registerDate = registerDate;
-	}
-
-	/**
-	 * @return the points
-	 */
-	public int getPoints() {
-		return points;
-	}
-
-	/**
-	 * @param points
-	 *            the points to set
-	 */
-	public void setPoints(int points) {
-		this.points = points;
-	}
-
-	/**
-	 * @return the credit
-	 */
-	public Credits getCredit() {
-		return credit;
-	}
-
-	/**
-	 * @param credit
-	 *            the credit to set
-	 */
-	public void setCredit(Credits credit) {
-		this.credit = credit;
-	}
-
-	/**
-	 * @return the profile
-	 */
-	public Profile getProfile() {
-		return profile;
-	}
-
-	/**
-	 * @param profile
-	 *            the profile to set
-	 */
-	public void setProfile(Profile profile) {
-		this.profile = profile;
-	}
 
 }

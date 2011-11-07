@@ -3,8 +3,11 @@
  */
 package com.fusion.model.core;
 
+import org.bson.types.ObjectId;
+
 import com.google.code.morphia.annotations.Entity;
 import com.google.code.morphia.annotations.Id;
+import com.google.code.morphia.annotations.PostLoad;
 
 /**
  * @author zhijun An activity represents a durable effort started by
@@ -12,7 +15,7 @@ import com.google.code.morphia.annotations.Id;
  */
 @Entity ("Activity")
 public class Activity {
-	@Id String id;
+	@Id ObjectId id;
 	private String title;
 	private String memo;
 	private Party creator;
@@ -118,6 +121,26 @@ public class Activity {
 	 */
 	public void setCreator(Party creator) {
 		this.creator = creator;
+	}
+	/**
+	 * @return the id
+	 */
+	public ObjectId getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(ObjectId id) {
+		this.id = id;
+	}
+
+	@PostLoad
+	public void postLoad(){
+		for(Criteria c:getCriterias().getCriterias() ){
+			c.setActivity(this);
+		}
 	}
 
 }

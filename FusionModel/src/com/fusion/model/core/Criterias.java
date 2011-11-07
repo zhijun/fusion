@@ -3,7 +3,10 @@
  */
 package com.fusion.model.core;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import com.google.code.morphia.annotations.Reference;
 
 /**
  * @author zhijun
@@ -13,6 +16,7 @@ public class Criterias {
 	/**
 	 * Parent Activity reference. 
 	 */
+	@Reference
 	private Activity activity;
 	
 	private List<Criteria> criterias;
@@ -36,6 +40,13 @@ public class Criterias {
 	 */
 	public void setActivity(Activity activity) {
 		this.activity = activity;
+	}
+	
+	public void addCriteria(Criteria criteria){
+		if(criterias==null){
+			criterias=new ArrayList<Criteria>(5);
+		}
+		criterias.add(criteria);
 	}
 
 	public boolean isMet() {

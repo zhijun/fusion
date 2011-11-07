@@ -17,6 +17,7 @@ public class AllConfirmCriteria extends Criteria {
 	 */
 	public AllConfirmCriteria() {
 		// TODO Auto-generated constructor stub
+		this.fact=new AllConfirmFact();
 		
 	}
 
