@@ -22,6 +22,7 @@ public class User {
 	private int points;
 	private Credits credit;
 	private Profile profile;
+	private float[] location;
 
 	/**
 	 * @return the uid
@@ -126,5 +127,19 @@ public class User {
 	 */
 	public void setProfile(Profile profile) {
 		this.profile = profile;
+	}
+
+	/**
+	 * @return the location
+	 */
+	public float[] getLocation() {
+		return location;
+	}
+
+	/**
+	 * @param location the location to set
+	 */
+	public void setLocation(float[] location) {
+		this.location = location;
 	}
 }
