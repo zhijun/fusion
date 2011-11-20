@@ -99,7 +99,7 @@ public class TestActivity {
 		//fact.takeBack(party2);
 		criterias.addCriteria(criteria);
 		act.setCriterias(criterias);
-		assertTrue(act.getCriterias().isMet());
+		assertTrue(act.getCriterias().isMet()); 
 
 		
 		mdb.save(user);
