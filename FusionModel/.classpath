@@ -3,5 +3,10 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/MongoDB"/>
+	<classpathentry kind="lib" path="/Libs/lib/gson-1.7.1.jar"/>
+	<classpathentry kind="lib" path="/Libs/lib/hessian-4.0.7-src.jar"/>
+	<classpathentry kind="lib" path="/Libs/lib/hessian-4.0.7.jar"/>
+	<classpathentry kind="lib" path="/Libs/lib/mongo-2.6.5.jar"/>
+	<classpathentry kind="lib" path="/Libs/lib/morphia-0.99.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
