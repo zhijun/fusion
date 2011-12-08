@@ -14,7 +14,7 @@ import com.google.code.morphia.annotations.PostLoad;
  *         participants including services.
  */
 @Entity ("Activity")
-public class Activity {
+public class Activity { 
 	@Id ObjectId id;
 	private String title;
 	private String memo;
