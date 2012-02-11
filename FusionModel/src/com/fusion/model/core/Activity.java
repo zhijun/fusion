@@ -18,7 +18,7 @@ public class Activity {
 	@Id ObjectId id;
 	private String title;
 	private String memo;
-	private Party creator;
+	private Party creator; 
 
 	/**
 	 * @return the title
