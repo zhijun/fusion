@@ -1,6 +1,7 @@
 package com.fusion.fengche;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +15,8 @@ public class FengcheActivity extends Activity {
 	private EditText pwd;
 	private Button login, register;
 	private String TAG="Fengche.Main";
+	public static final String ACTION_VALIDUSER = "com.fusion.validuser";
+	private final int VALIDUSER=1;
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -40,6 +43,23 @@ public class FengcheActivity extends Activity {
 		register = (Button) findViewById(R.id.btn_register);
 		 
 	}
+    
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		 switch(requestCode)
+		 {
+		 case VALIDUSER:
+			 if(resultCode==RESULT_OK)
+			 {
+				 String status=data.getStringExtra("status");
+				 if("202".equals(status))
+				 {
+					 
+				 }
+			 }
+			 
+		 }
+	}
 
 	private class MyListener implements OnClickListener {
 
@@ -55,6 +75,10 @@ public class FengcheActivity extends Activity {
 			{
 			case R.id.btn_login:
 				Log.i(TAG, "用户: "+username.getText()+"密码: "+pwd.getText()+"登陆正在尝试系统...");
+				Intent it=new Intent(ACTION_VALIDUSER);
+				it.putExtra("username", username.getText());
+				it.putExtra("pwd", pwd.getText());
+				startActivityForResult(it, VALIDUSER);
 				break;
 			case R.id.btn_register:
 				
