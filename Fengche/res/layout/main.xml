@@ -1,12 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:stretchColumns="1" >
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello" />
+    <TableRow>
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/username"
+            android:gravity="right"
+            android:padding="3dip"
+             android:textStyle="bold" 
+            android:text="@+string/username" />
+        <EditText
+            android:id="@+id/txt_username"
+            android:hint="@+string/username_hint"
+            android:padding="3dip"
+             android:maxLength="64"
+            android:scrollHorizontally="true" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/pwd"
+            android:gravity="right"
+            android:padding="3dip"
+             android:textStyle="bold" 
+            android:text="@+string/pwd" />
+        <EditText
+            android:id="@+id/txt_pwd"
+            android:hint="@+string/pwd_hint"
+            android:padding="3dip"
+          android:maxLength="16"
+          android:password="true"
+            android:scrollHorizontally="true" />
+    </TableRow>
+
+    <TableRow android:gravity="right" >
+        <Button
+            android:id="@+id/btn_login"
+            android:text="@+string/login" />
+        <Button
+            android:id="@+id/btn_register"
+            android:text="@+string/register" />
+    </TableRow>
+</TableLayout>

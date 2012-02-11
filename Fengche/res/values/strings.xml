@@ -3,5 +3,10 @@
 
     <string name="hello">Hello World, FengcheActivity!</string>
     <string name="app_name">Fengche</string>
-
+    <string name="username">帐号:</string>
+    <string name="username_hint">请输入帐号…</string>
+    <string name="pwd">密码:</string>
+    <string name="pwd_hint">请输入密码…</string>
+	 <string name="login">登陆</string>
+	 <string name="register">注册</string>
 </resources>
