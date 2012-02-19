@@ -6,7 +6,7 @@
 
     <TableRow>
 
-        <TextView
+        <TextView 
             android:id="@+id/username"
             android:gravity="right"
             android:padding="3dip"
